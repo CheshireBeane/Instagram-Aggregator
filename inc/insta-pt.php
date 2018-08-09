@@ -26,6 +26,7 @@ function cheshirebeane_register_instagram_post_type() {
 		"map_meta_cap" => true,
 		"hierarchical" => false,
 		"query_var" => true,
+		"menu_icon" => 'dashicons-camera',
 		"supports" => array( "title", "thumbnail" ),
 	);
 

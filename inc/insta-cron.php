@@ -1,13 +1,4 @@
 <?php
-// create a scheduled event (if it does not exist already)
-
-add_filter( 'cron_schedules', function ( $schedules ) {
-    $schedules['every-5-minutes'] = array(
-        'interval' => 5 * MINUTE_IN_SECONDS,
-        'display'  => __( 'Every minute' )
-    );
-    return $schedules;
-} );
 
 function reset_cb_cron(){
   $freq = get_option( 'cb_frequency' );
