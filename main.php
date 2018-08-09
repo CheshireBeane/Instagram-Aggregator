@@ -9,10 +9,6 @@
  */
 
 
-// https://api.instagram.com/oauth/authorize/?client_id=e1914cc46e6e4a6681b80c07781b0d2d&redirect_uri=http://localhost:8888&response_type=code
-
-
-
 
 function cheshirebeane_instagram_ui() {
    add_option( 'cb_access_code', '');
@@ -69,20 +65,6 @@ function cb_instagram_options_page()
 </div>
 <?php
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 function cheshirebeane_register_instagram_post_type() {
@@ -332,43 +314,5 @@ function cheshirebeane_get_instagram_media() {
   } //end if
 
 }
-
-add_action('init', 'cheshirebeane_get_instagram_media');
-
-
-// $response = wp_remote_get('https://api.instagram.com/v1/users/self/media/recent/?access_token=' . get_option('cb_access_code') . '' );
-//
-//
-// if ( is_array( $response ) && ! is_wp_error( $response ) ) {
-//   $headers = $response['headers']; // array of http header lines
-//   $body    = $response['body']; // use the content
-//   $data    = json_decode($body)->data;
-//
-//   foreach ($data as $post) {
-//     $post_title = $post->id;
-//     echo date_i18n('Y/m/d', $post->created_time);
-//
-//     // if (!post_exists($post_title)) {
-//     //   // Create post object
-//     //   $my_post = array(
-//     //     'post_title'    => $post->id,
-//     //     // 'post_author'   => 1,
-//     //     'post_type'     => 'instagram-media',
-//     //     'post_status'   => 'publish',
-//     //     'meta_input' => array(
-//     //       'cb_insta_link' => $post->link,
-//     //       'cb_insta_likes' => $post->likes->count,
-//     //       'cb_insta_image' => $post->images->standard_resolution->url
-//     //     )
-//     //   );
-//     //
-//     //   // Insert the post into the database
-//     //   // wp_insert_post( $my_post );
-//     // }
-//
-//   }
-//
-//
-// }
 
 ?>
