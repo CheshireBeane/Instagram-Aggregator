@@ -30,7 +30,15 @@ function cheshirebeane_get_instagram_media() {
 
           // Insert the post into the database
           wp_insert_post( $my_post );
+
+
+          // write to log
+          $log_path = ABSPATH . 'wp-content/plugins/cb-instagram/logs/logfile.txt';
+          $txt = date('m-d-y h:m') . ' - - - - -> New Media Added ' . $post->link;
+          file_put_contents($log_path, $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
         }
+
+
 
       }
 
