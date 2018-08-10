@@ -3,9 +3,7 @@ function init_get_media_callback(){
   if(isset($_POST['getmedia'])) {
     cheshirebeane_get_instagram_media();
     ?>
-    <div class="updated notice">
-      <p>Successfully received media from Instagram!</p>
-    </div>
+
     <?php
   }
 }
@@ -87,5 +85,10 @@ function cb_instagram_options_page()
          </span>
 
     </form>
+    <br/>
+    <h2>Import History</h2>
+    <a href="<?php echo home_url() . '/wp-content/plugins/cb-instagram/logs/logfile.html'; ?>" target="_blank">
+      <input id="view-logs" name="viewlogs" type="submit" value="View Logs" class="button" />
+    </a>
 <?php
 }

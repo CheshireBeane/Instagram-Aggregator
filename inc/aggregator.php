@@ -33,8 +33,8 @@ function cheshirebeane_get_instagram_media() {
 
 
           // write to log
-          $log_path = ABSPATH . 'wp-content/plugins/cb-instagram/logs/logfile.txt';
-          $txt = date('m-d-y h:m') . ' - - - - -> New Media Added ' . $post->link;
+          $log_path = ABSPATH . 'wp-content/plugins/cb-instagram/logs/logfile.html';
+          $txt = '<p>' . date('m-d-y h:m') . ' - - - - -> New Media Added <a href="' . $post->link . '">' . $post->link . '</a></p>';
           file_put_contents($log_path, $txt.PHP_EOL , FILE_APPEND | LOCK_EX);
         }
 
