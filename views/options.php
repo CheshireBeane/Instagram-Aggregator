@@ -1,4 +1,17 @@
 <?php
+function init_get_media_callback(){
+  if(isset($_POST['getmedia'])) {
+    cheshirebeane_get_instagram_media();
+    ?>
+    <div class="updated notice">
+      <p>Successfully received media from Instagram!</p>
+    </div>
+    <?php
+  }
+}
+add_action('init', 'init_get_media_callback');
+
+
 function cheshirebeane_instagram_ui() {
    add_option( 'cb_access_code', '');
    register_setting( 'cb_insta_options_group', 'cb_access_code', 'cb_plugin_callback' );
@@ -53,5 +66,26 @@ function cb_instagram_options_page()
     </div>
   </form>
 </div>
+
+<hr/>
+
+    <h2>Get Media On Demand</h2>
+    <form method="post" action="">
+      <?php
+        if(isset($_POST['getmedia'])) {
+          ?>
+          <div class="updated notice" style="margin-left: 0; margin-bottom: 25px;">
+            <p>Successfully received media from Instagram!</p>
+          </div>
+          <?php
+        }
+       ?>
+         <span id="test-button">
+
+              <input id="test-settings" name="getmedia" type="submit" value="Get Media" class="button" >
+
+         </span>
+
+    </form>
 <?php
 }

@@ -12,9 +12,6 @@
 // Helpers
 require_once dirname( __FILE__ ) .'/lib/helpers.php';
 
-//Admin Panel UI
-require_once dirname( __FILE__ ) .'/views/options.php';
-
 // Instagram CPT
 require_once dirname( __FILE__ ) .'/inc/insta-pt.php';
 
@@ -26,5 +23,11 @@ require_once dirname( __FILE__ ) .'/inc/insta-cron.php';
 
 // Dynamic scheduled tasks
 require_once dirname( __FILE__ ) .'/inc/aggregator.php';
+
+// For getting media on demand
+// require_once dirname( __FILE__ ) .'/inc/get-media.php';
+
+//Admin Panel UI
+require_once dirname( __FILE__ ) .'/views/options.php';
 
 ?>
