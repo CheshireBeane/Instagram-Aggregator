@@ -1,5 +1,8 @@
 <?php
 function init_get_media_callback(){
+  if ( ! function_exists( 'post_exists' ) ) {
+      require_once( ABSPATH . 'wp-admin/includes/post.php' );
+  }
   if(isset($_POST['getmedia'])) {
     cheshirebeane_get_instagram_media();
     ?>

@@ -1,13 +1,13 @@
 <?php
 function cheshirebeane_instagram_metaboxes() {
-	add_meta_box(
-		'cb_insta_image',
-		'Image Url',
-		'cb_insta_image',
-		'instagram-media',
-		'normal',
-		'default'
-	);
+	// add_meta_box(
+	// 	'cb_insta_image',
+	// 	'Image Url',
+	// 	'cb_insta_image',
+	// 	'instagram-media',
+	// 	'normal',
+	// 	'default'
+	// );
 	add_meta_box(
 		'cb_insta_link',
 		'Link',
@@ -28,15 +28,15 @@ function cheshirebeane_instagram_metaboxes() {
 add_action( 'add_meta_boxes_instagram-media', 'cheshirebeane_instagram_metaboxes' );
 
 
-function cb_insta_image() {
-	global $post;
-	// Nonce field to validate form request came from current site
-	wp_nonce_field( basename( __FILE__ ), 'cb_insta_image' );
-	// Get the location data if it's already been entered
-	$location = get_post_meta( $post->ID, 'cb_insta_image', true );
-	// Output the field
-	echo '<input type="text" name="image" value="' . esc_textarea( $location )  . '" class="widefat">';
-}
+// function cb_insta_image() {
+// 	global $post;
+// 	// Nonce field to validate form request came from current site
+// 	wp_nonce_field( basename( __FILE__ ), 'cb_insta_image' );
+// 	// Get the location data if it's already been entered
+// 	$location = get_post_meta( $post->ID, 'cb_insta_image', true );
+// 	// Output the field
+// 	echo '<input type="text" name="image" value="' . esc_textarea( $location )  . '" class="widefat">';
+// }
 function cb_insta_link() {
 	global $post;
 	// Nonce field to validate form request came from current site
@@ -64,9 +64,9 @@ function cheshirebeane_save_instagram_media_metaboxes( $post_id ){
 
 
 	//UPLOAD FIELDS
-	if ( isset( $_REQUEST['image'] ) ) {
-		update_post_meta( $post_id, 'cb_insta_image', sanitize_text_field( $_POST['image'] ) );
-	}
+	// if ( isset( $_REQUEST['image'] ) ) {
+	// 	update_post_meta( $post_id, 'cb_insta_image', sanitize_text_field( $_POST['image'] ) );
+	// }
 
 	if ( isset( $_REQUEST['link'] ) ) {
 		update_post_meta( $post_id, 'cb_insta_link', sanitize_text_field( $_POST['link'] ) );

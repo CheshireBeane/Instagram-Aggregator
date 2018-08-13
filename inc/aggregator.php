@@ -23,13 +23,14 @@ function cheshirebeane_get_instagram_media() {
             'post_date'     =>  date_i18n('Y/m/d', $post->created_time),
             'meta_input' => array(
               'cb_insta_link' => $post->link,
-              'cb_insta_likes' => $post->likes->count,
-              'cb_insta_image' => $post->images->standard_resolution->url
+              'cb_insta_likes' => $post->likes->count
             )
           );
 
           // Insert the post into the database
-          wp_insert_post( $my_post );
+          $new_post_id = wp_insert_post( $my_post );
+
+          Generate_Featured_Image($post->images->standard_resolution->url, $new_post_id);
 
 
           // write to log
