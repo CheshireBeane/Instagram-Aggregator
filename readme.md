@@ -9,7 +9,7 @@ Download this repo as a zip, and install on the WordPress plugins page.
 
 ## Setup
 
-Go to the `CheshireBeane Instagram Aggregator` settings page in WordPress and input your (Instagram access token)[https://www.instagram.com/developer/].
+Go to the `CheshireBeane Instagram Aggregator` settings page in WordPress and input your [Instagram access token](https://www.instagram.com/developer/).
 
 You can then click `get media` to aggregate instagram data, as well as schedule how often to run the aggregator.
 
