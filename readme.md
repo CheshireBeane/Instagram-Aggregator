@@ -1,6 +1,6 @@
 # Wordpress Instagram Aggregator
 
-A WordPress plugin to store instagram posts as a custom post type.
+A WordPress plugin for storing instagram media as a custom post type.
 
 ## Installing
 
