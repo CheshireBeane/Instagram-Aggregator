@@ -1,4 +1,4 @@
-This is new.
+This is kinda new.
 
 # Wordpress Instagram Aggregator
 
