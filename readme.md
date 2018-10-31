@@ -1,5 +1,3 @@
-This is a thing.
-
 
 # Wordpress Instagram Aggregator
 
