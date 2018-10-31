@@ -1,4 +1,4 @@
-This is new application.
+This is new.
 
 # Wordpress Instagram Aggregator
 
